@@ -1,0 +1,130 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ffc1c1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.valentine-card {
+  font-family: 'Fraunces', serif;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  max-width: 350px;
+  animation: float 6s ease-in-out infinite,
+             glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(255, 182, 185, 0.4);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.7);
+  }
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.prompt {
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  margin: 0 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#yesBtn {
+  background: #ffb6b9;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+#noBtn {
+  background: #ffd6cc;
+  color: #fff;
+}
+
+/* Sparkle Cursor */
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, white 0%, pink 60%, transparent 80%);
+  animation: sparkleFade 0.6s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes sparkleFade {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* Photo Reveal */
+.photo-container {
+  margin-top: 1.5rem;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.photo-container img {
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+.photo-comment {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.valentine-card {
+  position: relative;
+}
+#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+

@@ -19,7 +19,16 @@ noBtn.addEventListener('mouseover', () => {
   "Don’t break my heart 💔",
   "I’ll cry 😭",
   "Last chance 😢",
-  "You can’t catch me 😜"
+  "You can’t catch me 😜",
+  "Think again… 💖",
+  "I’ve been waiting for this 😘",
+  "Promise you’ll say yes? 🥺",
+  "Nooo, don’t do that 😢",
+  "I’ll be sad forever 😭",
+  "Give me a chance 💌",
+  "My heart is yours 💘",
+  "You know I love you 💖",
+  "Please… just say yes ✨"
 ];
 
 prompt.textContent = messages[noClicks % messages.length];
@@ -132,3 +141,4 @@ document.addEventListener("mousemove", (e) => {
     sparkle.remove();
   }, 600);
 });
+
